@@ -1,4 +1,4 @@
-﻿var currActive = "105";
+﻿var currActive = "104";
 function MC(m) {
     var obj = document.getElementById("MI" + m.toString());
     var cN = obj.className;
@@ -21,7 +21,7 @@ function MCA(ca) {
     }
     else {
         currActive = ca;
-        for (var i = 101; i <= 106; i++) {
+        for (var i = 101; i <= 105; i++) {
             obj = document.getElementById("MIU" + i.toString());
             if (i == ca) {
                 obj.className = "active";
@@ -61,8 +61,14 @@ function SetFrameHeight() {
 }
 function onload() {
     var valuelist = $('valueList').innerHTML.split(';');
+
     if (checkLogin(valuelist[0], 1)) {
-        $('Technology').value = valuelist[1].split(',')[0];
+        //$('Technology').value = valuelist[1].split(',')[0];
+        var power = getCookie("power");
+        if (power == "super" || true) {
+            $('MIU102').style.display = '';
+            $('MIU103').style.display = '';
+        }
     }
 }
 

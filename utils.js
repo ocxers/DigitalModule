@@ -9,6 +9,20 @@ function GetSignedNumber(v) {
         return v;
     }
 }
+function GetTypes(t) {
+    switch (t * 1) {
+        case 0:
+            return 'Digital Channel Selecting';
+        case 1:
+            return 'Band Tunable';
+        case 2:
+            return 'Frequency Shift Donor';
+        case 3:
+            return 'Frequency Shift Remote';
+        default:
+            return 'Digital Channel Selecting';
+    }
+}
 function myDecimal(num, v) {
     var vv = Math.pow(10, v);
     return Math.round(num * vv) / vv;

@@ -193,10 +193,11 @@ table {
 	background-color:transparent;
 	border-collapse:collapse;
 	border-spacing:0;
+	border-top: 2px solid #4D4D4D !important;
 }
 .table {
 	width:100%;
-	border-top: 2px solid #4D4D4D;
+	border-top: 2px solid #4D4D4D !important;
 	margin-bottom:18px;
 }
 .table th,.table td {
@@ -216,7 +217,7 @@ table {
 	border-top:0;
 }
 .table tbody + tbody {
-	border-top:2px solid #dddddd;
+	border-top:2px solid #4d4d4d !important;
 }
 .table-condensed th,.table-condensed td {
 	padding:4px 5px;
@@ -229,6 +230,7 @@ table {
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	border-radius:4px;
+	border-top:2px solid #4D4D4D !important;
 }
 .table-bordered th,.table-bordered td {
 	border-left:1px solid #dddddd;
@@ -270,6 +272,11 @@ table .span1 {
 table .span2 {
 	float:none;
 	width:124px;
+	margin-left:0;
+}
+table .span4 {
+	float:none;
+	width:284px;
 	margin-left:0;
 }
 .pull-left {

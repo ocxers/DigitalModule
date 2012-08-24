@@ -7,7 +7,7 @@
     <script src="utils.js" type="text/javascript"></script>
 </head>
 <body>
-    <div id="valueList" style="display: none;">
+    <div id="valueList" style="display: none;">1;1
     </div>
     <div class="m-bar">
         <div style="width: 920px; margin: 0 auto; height: 40px; background-color: #EDEDED;">
@@ -16,24 +16,7 @@
                 Digital Pico Repeater Ver1.0</div>
             <div style="float: right; line-height: 30px;">
                 <input type="button" value="Exit" class="btn" style="margin-top: 6px;" onclick="SignOut();" />
-            </div>
-            <div style="float: right; padding-right: 10px;">
-                <form method="post" name="FTechnology" id="FTechnology">
-                Technology:
-                <select name="Technology" id="Technology" onchange="SetTechnology()" style="width: 100px;
-                    height: 25px;">
-                    <option value="0">DCS</option>
-                    <option value="1">WCDMA</option>
-                    <option value="2">GSM</option>
-                    <option value="3">CDMA</option>
-                    <option value="4">LTE</option>
-                    <option value="5">PCS</option>
-                    <option value="6">Cell</option>
-                    <option value="7">AWS</option>
-                </select>
-                <input type="hidden" name="type" id="hidtype" />
-                </form>
-            </div>
+            </div>            
         </div>
     </div>
     <div id="ibody" class="container" style="min-height: 600px; margin-bottom: 30px;">
@@ -47,16 +30,13 @@
                         <div id="MI1" class="shown" style="border-top: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD;">
                             <div class="accordion-inner">
                                 <ul class="nav nav-list">
-                                    <li id="MIU105" onclick="MCA('105');" class="active"><a href="BasicInfo.html" target="mainFrame">
+                                    <li id="MIU104" onclick="MCA('104');" class="active"><a href="BasicInfo.html" target="mainFrame">
                                         Basic Infomation</a></li>
-                                    <li id="MIU101" onclick="MCA('101');"><a href="Channels.html" target="mainFrame">Sub-band
-                                        / Channels</a></li>
-                                    <li id="MIU102" onclick="MCA('102');"><a href="VCO.html" target="mainFrame">VCO</a></li>
-                                    <li id="MIU103" onclick="MCA('103');"><a href="Debug.html" target="mainFrame" target="mainFrame">
+                                    <li id="MIU101" onclick="MCA('101');"><a href="Channels.html" target="mainFrame">Parameters</a></li>
+                                    <li id="MIU102" onclick="MCA('102');" style="display: none;"><a href="VCO.html" target="mainFrame">VCO</a></li>
+                                    <li id="MIU103" onclick="MCA('103');" style="display: none;"><a href="Debug.html" target="mainFrame" target="mainFrame">
                                         Debug</a></li>
-                                    <li id="MIU104" onclick="MCA('104');"><a href="RFStatus.html" target="mainFrame">RF
-                                        Status</a></li>
-                                    <li id="MIU106" onclick="MCA('106');"><a href="Tools.html" target="mainFrame">Tools</a></li>
+                                    <li id="MIU105" onclick="MCA('105');"><a href="Tools.html" target="mainFrame">Tools</a></li>
                                 </ul>
                             </div>
                         </div>

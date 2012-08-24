@@ -23,9 +23,12 @@
             <tbody>
                 <tr>
                     <td style="text-align: center;">
-                        <input type="button" value="Backup" class="btn" onclick="SubmitForm(1);" /><input
-                            type="button" value="Restore" class="btn" onclick="SubmitForm(2);" /><input type="button"
-                                value="Restart" class="btn" onclick="SubmitForm(3);" />
+                        <input id="backup" type="button" style="display: none;" value="Backup Factory Settings"
+                            class="btn" onclick="SubmitForm(5);" /><input id="restore" type="button" style="display: none;"
+                                value="Factory Reset" class="btn" onclick="SubmitForm(6);" />
+                        <input type="button" value="Backup Flash Data" class="btn" onclick="SubmitForm(1);" /><input
+                            type="button" value="Restore Flash Data" class="btn" onclick="SubmitForm(2);" /><input
+                                type="button" value="Restart" class="btn" onclick="SubmitForm(3);" />
                     </td>
                 </tr>
             </tbody>
@@ -48,6 +51,8 @@
                     </td>
                     <td rowspan="3" class="span1">
                         <input type="button" value="Set" class="btn" onclick="SubmitForm(4);" />
+                        <input id="initpwd" type="button" value="Initialize Admin PWD" style="display: none;"
+                            title="Default PWD is 12345" class="btn" onclick="SubmitForm(7);" />
                     </td>
                 </tr>
                 <tr>

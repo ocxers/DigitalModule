@@ -2,6 +2,21 @@
     var valuelist = $('valueList').innerHTML.split(';');
     if (checkLogin(valuelist[0], 1)) {
         valuelist = valuelist[1].split(',');
+        switch (valuelist[0]) {
+            case 0:
+                break;
+            case 1:
+                alert('Failed to change password.');
+                break;
+            case 2:
+                alert('Success to change the password.');
+                break;
+            case 3:
+                alert('Success to backup factory settings.');
+                break;
+            default:
+
+        }
         if (valuelist[0] == 0) {
             return;
         }
@@ -10,6 +25,13 @@
         }
         else {
             alert('Success to change the password.');
+        }
+
+        var power = getCookie("power");
+        if (power == "super") {
+            $('backup').style.display = '';
+            $('restore').style.display = '';
+            $('initpwd').style.display = '';
         }
     }
 }
@@ -25,6 +47,15 @@ function SubmitForm(formNumber) {
             break;
         case 3:
             paramList = '3,';
+            break;
+        case 5:
+            paramList = '5,';
+            break;
+        case 6:
+            paramList = '6,';
+            break;
+        case 7:
+            paramList = '7,';
             break;
         default:
             //Set IP Address
@@ -49,8 +80,8 @@ function SubmitForm(formNumber) {
     }
 
     if (confirm('Sure submit?')) {
-//        alert(formNumber + '-=:=-' + paramList);
-//        return;
+        //        alert(formNumber + '-=:=-' + paramList);
+        //        return;
         submitForm.action = 'Tools.html?length=' + paramList.length
                 + '&orderId=' + formNumber + '&hid_1=' + paramList;
         submitForm.submit();

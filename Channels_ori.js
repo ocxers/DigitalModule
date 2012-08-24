@@ -4,7 +4,7 @@
         var chcount = valuelist[1].split(',');
         $('CHC').value = chcount[1];
         $('chcounts').value = chcount[1];
-        $('FrequencyType').value = chcount[0];
+        $('FrequencyType').innerHTML = GetTypes(chcount[0]);
 
         CreateChannelTable(chcount[1], valuelist[2], chcount[0]);
         CreateOtherTable();
@@ -23,6 +23,7 @@
         }
     }
 }
+
 ////包含start和end
 //function CreateChannelTable(cc, vl) {
 //    var tHead = '<table class="table table-condensed table-bordered"><thead><tr class="bgGray"><td class="span1">CH #</td><td class="span1">DL</td><td class="span1">CH SW</td><td class="span1">Start</td><td class="span1">End</td><td class="span1">UL PI</td><td class="span1">UL PO</td><td class="span1">DL PI</td><td class="span1">DL PO</td></tr></thead>';
