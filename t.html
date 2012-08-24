@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body>
+    <input type="text" x-webkit-speech />
+    <script>
+        function myDecimal(num, v) {
+            var vv = Math.pow(10, v);
+            return Math.round(num * vv) / vv;
+        }
+        alert(myDecimal(3.1415926, 2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign in Validate - Dagital Module</title>
+</head>
+<body>
+    <div id="valueList" style="display: none;">
+    </div>
+    <script>
+        function checkLogon() {
+            var hid_value = document.getElementById("valueList").innerHTML;
+            var bLogon = hid_value.split(",")[0] == "true" ? true : false;
+            var power = hid_value.split(",")[1];
+            var type = hid_value.split(",")[2];
+            if (bLogon == true) {
+                var now = new Date();
+                now.setMinutes(now.getMinutes() + 1);
+                setCookie("login", bLogon);
+                setCookie("power", power);
+                setCookie("type", type);
+                parent.window.location.href = "Index.html";
+            }
+            else {
+                alert("The UserID or the Password isn't correct. Please try again.");
+                parent.window.location.href = "Signin.html";
+            }
+        }
+        function setCookie(name, value) {
+            var date = new Date();
+            date.setTime(date.getTime() + 1800 * 1000);
+            document.cookie = name + "=" + escape(value) + ";expires=" + date.toGMTString();
+        }
+        checkLogon();
+    </script>
+</body>
+</html>
